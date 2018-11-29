@@ -57,7 +57,7 @@ public class WorkOrderController {
 
   @DeleteMapping(value = "/{id}")
   @ResponseStatus(HttpStatus.OK)
-  @ApiOperation("Delets the given work order from the queue if it exists.")
+  @ApiOperation("Deletes the given work order from the queue if it exists.")
   public WorkOrder deleteWorkOrder(@PathVariable("id") BigInteger id) {
     WorkOrder deletedWorkOrder = workOrderRepository.deleteWorkOrder(id);
     if (deletedWorkOrder == null) {

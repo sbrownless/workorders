@@ -121,9 +121,4 @@ public class TestDateConverterUtilities {
   void testGetDateFromInvalidNonLeapYearDateInlIso8601StringFormat () {
     assertThrows(IllegalArgumentException.class, ()-> DateConverterUtilities.getDateTimefromIso8601StringFormat(VALID_ISO_8601_DATE_FORMAT_WITH_INVALID_DATE));
   }
-
-  @Test
-  @DisplayName("Test conversion from a valid String but in the future to a date object, this is not allowed")
-  void testGetDateFromDateInTheFutureInlIso8601StringFormat () {
-    assertThrows(IllegalArgumentException.class, ()-> DateConverterUtilities.getDateTimefromIso8601StringFormat(VALID_TEST_DATE__IN_FUTURE_STRING));  }
 }

@@ -135,6 +135,13 @@ public class TestWorkOrderRepository extends TestWorkOrderData {
   }
 
   @Test
+  @DisplayName("Test adding a work order with a future date.")
+  void testAddingWorkOrderWithFutureDate() {
+    final WorkOrderRepository repository = new WorkOrderRepositoryImpl();
+    assertThrows(IllegalArgumentException.class, ()-> repository.addWorkOrder(PRIORITY_ID, FUTURE_TIME));
+  }
+
+  @Test
   @DisplayName("Delete work order item from the queue.")
   void testWorkOrderItemDeletion () {
     final WorkOrderRepository repository = new WorkOrderRepositoryImpl();
@@ -228,8 +235,6 @@ public class TestWorkOrderRepository extends TestWorkOrderData {
 
     // put a stupid reference id in here in the past for all entries
     assertEquals(0.0, repository.getQueueMeanWaitTime("2018-11-25T23:43:43Z"));
-
-
 
   }
 }

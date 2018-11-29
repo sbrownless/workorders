@@ -24,6 +24,9 @@ public abstract class TestWorkOrderData {
   public static final String OLDER_ENTRY_TIME = "2018-11-25T23:45:42Z";
   public static final String ANCIENT__ENTRY_TIME = "2016-11-25T23:45:42Z";
 
+
+  public static final String FUTURE_TIME = "2125-11-25T23:45:43Z";
+
   public static final WorkOrder MANAGEMENT_WORK_ORDER = new WorkOrder(MANAGEMENT_ID, ENTRY_TIME);
   public static final WorkOrder OLDER_MANAGEMENT_WORK_ORDER = new WorkOrder(OLDER_MANAGEMENT_ID, OLDER_ENTRY_TIME);
   public static final WorkOrder ANCIENT_MANAGEMENT_WORK_ORDER = new WorkOrder(ANCIENT_MANAGEMENT_ID, ANCIENT__ENTRY_TIME);
