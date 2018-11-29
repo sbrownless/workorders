@@ -73,11 +73,6 @@ public class DateConverterUtilities {
         ZonedDateTime zonedDateTime =
             ZonedDateTime.parse(iso8601Representation, DateTimeFormatter.ISO_DATE_TIME);
 
-        if (zonedDateTime.compareTo(ZonedDateTime.now()) > 0) {
-          throw new IllegalArgumentException(
-              String.format(DATE_IN_FUTURE_ERROR_STRING, iso8601Representation));
-        }
-
         return ZonedDateTime.parse(iso8601Representation, DateTimeFormatter.ISO_DATE_TIME);
       } catch (DateTimeException dte) {
         throw new IllegalArgumentException(

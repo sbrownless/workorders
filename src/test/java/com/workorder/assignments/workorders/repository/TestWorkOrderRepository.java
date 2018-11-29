@@ -12,6 +12,8 @@ import com.workorder.assignments.workorders.utilities.BigIntegerConversionUtilit
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import com.workorder.assignments.workorders.entities.WorkOrder;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -25,7 +27,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Created By:   brownless
  * For Project:  workorder
  */
-
 public class TestWorkOrderRepository extends TestWorkOrderData {
 
   static final WorkOrderRepository overallRepository = new WorkOrderRepositoryImpl();

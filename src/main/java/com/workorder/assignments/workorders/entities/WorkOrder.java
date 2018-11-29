@@ -43,6 +43,12 @@ public class WorkOrder implements Comparable<WorkOrder> {
     this.id = BigIntegerConversionUtilities.getConverttoValidWorkOrderId(id);
     workOrderClassification = WorkOrderClassification.determineClassificationFromId(this.id);
     queueEntryDate = DateConverterUtilities.getDateTimefromIso8601StringFormat(entryDate);
+    if (queueEntryDate.compareTo(ZonedDateTime.now()) > 0) {
+      throw new IllegalArgumentException(
+          String.format("Date in the future is not allowed."));
+    }
+
+
   }
 
   /**
