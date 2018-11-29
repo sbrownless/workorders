@@ -44,7 +44,7 @@ Create a new work order item in the repository.
 
 ***Errors:*** An IllegalArgumentException will be raised if any of the inputs do not conform. Resulting in a status of 500
 
-======================================================================================================  
+=================================================================================  
 ***Retrieve and Delete the top Work Order entry***  
 Retrieves the item number at the top of the list and removes it from the list.  
 ***Parameter:NONE***  
@@ -57,7 +57,7 @@ Retrieves the item number at the top of the list and removes it from the list.
 
 ***Errors:*** An IllegalArgumentException will be raised if any of the inputs do not conform. Resulting in a status of 500  
 
-====================================================================================================== 
+================================================================================= 
 
 ***Deletes a Work Order entry***  
 Deletes the given work entry from the repository.    
@@ -76,7 +76,7 @@ Deletes the given work entry from the repository.
 
 ***Errors:*** A NoSuchElementException will be raised if item to be deleted does not exist. Resulting in a status of 500
 
-====================================================================================================== 
+================================================================================= 
 
 ***Get the mean wait time from the reference time***  
 Retrieves the mean wait time from the given reference time for all valid items in the queue. Work orders that are in the future from the reference date are not considered.     
@@ -90,7 +90,7 @@ Retrieves the mean wait time from the given reference time for all valid items i
 
 ***Errors:*** An IllegalArgumentException will be raised if any of the inputs do not conform. Resulting in a status of 500
 
-====================================================================================================== 
+================================================================================= 
 
 ***Get the work order queue position for the given identity***  
 Retrieves the position for the given id, if one exists. If it does not exist -1 is simply returned.     
@@ -104,7 +104,7 @@ Retrieves the position for the given id, if one exists. If it does not exist -1 
 
 ***Errors:*** Will return -1 if the item is not in the queue. This includes if a bogus value is passed.  
 
-====================================================================================================== 
+================================================================================= 
 
 ***Get a sorted list of identities***  
 Gets a sorted list of BigIntegers id's as they are ordered in the queue     
@@ -123,6 +123,6 @@ Gets a sorted list of BigIntegers id's as they are ordered in the queue
 
 ***Errors:*** None an empty list will be returned if there is nothing to process.  
 
-======================================================================================================   
+=================================================================================   
 
 
