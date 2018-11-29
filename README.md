@@ -35,12 +35,12 @@ Create a new work order item in the repository.
 ***LOCATION:/workorder***  
 ***EXAMPLE:***curl -X POST "http://localhost:8080/workorder?entryDate=2018-11-25T23%3A45%3A42Z&id=34" -H "accept: application/json"  
 ***Return*** Work Order object that was created e.g.  
-```{  
+{  
   "id": 36,  
   "workOrderClassification": "PRIORITY",  
   "timeInQueue": 322680,  
   "rank": 4093007.483645748  
-}```   
+}   
 
 ***Errors:*** An IllegalArgumentException will be raised if any of the inputs do not conform. Resulting in a status of 500
 
@@ -67,12 +67,12 @@ Deletes the given work entry from the repository.
 ***LOCATION:/workorder/id***  
 ***EXAMPLE:***curl -X DELETE "http://localhost:8080/workorder/654" -H "accept: application/json"    
 ***Return*** Work Order object that was created e.g.  
-```{  
+{  
   "id": 36,  
   "workOrderClassification": "PRIORITY",  
   "timeInQueue": 322680,  
   "rank": 4093007.483645748  
-}```   
+}   
 
 ***Errors:*** A NoSuchElementException will be raised if item to be deleted does not exist. Resulting in a status of 500
 
@@ -86,7 +86,7 @@ Retrieves the mean wait time from the given reference time for all valid items i
 ***LOCATION:/workorder/meanwaittime/referenceDate***  
 ***EXAMPLE:***curl -X GET "http://localhost:8080/workorder/meanwaittime/2018-11-25T23%3A46%3A43Z" -H "accept: application/json"    
 ***Return:*** Mean wait time for all eligible work orders e.g.  
-```60```   
+60   
 
 ***Errors:*** An IllegalArgumentException will be raised if any of the inputs do not conform. Resulting in a status of 500
 
@@ -100,7 +100,7 @@ Retrieves the position for the given id, if one exists. If it does not exist -1 
 ***LOCATION:/workorder/queue_position/id***  
 ***EXAMPLE:***curl -X GET "http://localhost:8080/workorder/queue_position/7" -H "accept: application/json"      
 ***Return:*** The location in the queue for the id, if it exists on the system. e.g.  
-```32```   
+32   
 
 ***Errors:*** Will return -1 if the item is not in the queue. This includes if a bogus value is passed.  
 
@@ -114,12 +114,12 @@ Gets a sorted list of BigIntegers id's as they are ordered in the queue
 ***LOCATION:/workorder/sortedlist***  
 ***EXAMPLE:***curl -X GET "http://localhost:8080/workorder/sortedlist" -H "accept: application/json"      
 ***Return:*** The list of identifiers in the queue as they exist. e.g.  
-```[
+[
   15,
   12,
   1,
   37
-]```   
+]   
 
 ***Errors:*** None an empty list will be returned if there is nothing to process.  
 
